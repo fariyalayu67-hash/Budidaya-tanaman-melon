@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriMelon - Panduan Lengkap Budidaya Tanaman Melon</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts Inter & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        melon: {
+                            green: '#15803d',
+                            lightgreen: '#86efac',
+                            gold: '#f59e0b',
+                            amber: '#fbbf24',
+                            orange: '#f97316',
+                            cream: '#fefce8',
+                            dark: '#052e16'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        .bg-pattern {
+            background-color: #f8fafc;
+            background-image: radial-gradient(#16a34a 0.5px, transparent 0.5px), radial-gradient(#16a34a 0.5px, #f8fafc 0.5px);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+            background-opacity: 0.05;
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-800 bg-slate-50 antialiased">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-emerald-100 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-emerald-600 to-amber-400 flex items-center justify-center text-white shadow-lg shadow-emerald-600/20">
+                        <i class="fa-solid font-bold fa-seedling text-2xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-2xl font-extrabold bg-gradient-to-r from-emerald-700 via-emerald-600 to-amber-500 bg-clip-text text-transparent">AgriMelon</span>
+                        <span class="block text-xs font-medium text-emerald-800 tracking-wider">Pusat Edukasi Melon</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex space-x-8 text-sm font-semibold text-slate-700">
+                    <a href="#hero" class="hover:text-emerald-600 transition">Beranda</a>
+                    <a href="#tahapan" class="hover:text-emerald-600 transition">Tahapan Budidaya</a>
+                    <a href="#kalkulator" class="hover:text-emerald-600 transition">Kalkulator Panen</a>
+                    <a href="#jadwal" class="hover:text-emerald-600 transition">Jadwal HST</a>
+                    <a href="#hama" class="hover:text-emerald-600 transition">Hama & Penyakit</a>
+                    <a href="#faq" class="hover:text-emerald-600 transition">FAQ</a>
+                </nav>
+
+                <div class="hidden md:flex items-center">
+                    <a href="#kalkulator" class="bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white px-5 py-2.5 rounded-xl font-medium shadow-md shadow-emerald-600/20 transition transform hover:-translate-y-0.5">
+                        <i class="fa-solid fa-calculator mr-2"></i>Hitung Hasil
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" class="md:hidden text-slate-700 hover:text-emerald-600 focus:outline-none text-2xl">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 px-4 pt-2 pb-6 space-y-3">
+            <a href="#hero" class="block px-3 py-2 rounded-lg hover:bg-emerald-50 text-slate-700 font-medium">Beranda</a>
+            <a href="#tahapan" class="block px-3 py-2 rounded-lg hover:bg-emerald-50 text-slate-700 font-medium">Tahapan Budidaya</a>
+            <a href="#kalkulator" class="block px-3 py-2 rounded-lg hover:bg-emerald-50 text-slate-700 font-medium">Kalkulator Panen</a>
+            <a href="#jadwal" class="block px-3 py-2 rounded-lg hover:bg-emerald-50 text-slate-700 font-medium">Jadwal HST</a>
+            <a href="#hama" class="block px-3 py-2 rounded-lg hover:bg-emerald-50 text-slate-700 font-medium">Hama & Penyakit</a>
+            <a href="#faq" class="block px-3 py-2 rounded-lg hover:bg-emerald-50 text-slate-700 font-medium">FAQ</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="relative overflow-hidden bg-gradient-to-b from-emerald-900 via-emerald-800 to-emerald-950 text-white py-20 lg:py-28">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        
+        <!-- Decorative Glows -->
+        <div class="absolute top-1/4 -left-20 w-80 h-80 bg-amber-500/20 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-emerald-400/20 rounded-full blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 bg-emerald-800/80 border border-emerald-600/50 px-4 py-2 rounded-full text-xs sm:text-sm font-medium text-emerald-200 backdrop-blur-md">
+                        <span class="flex h-2 w-2 rounded-full bg-amber-400 animate-pulse"></span>
+                        <span>Panduan Modern Budidaya Hortikultura</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight">
+                        Panduan Lengkap <br>
+                        <span class="bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 bg-clip-text text-transparent">Budidaya Tanaman Melon</span>
+                    </h1>
+
+                    <p class="text-lg text-emerald-100/90 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        Maksimalkan potensi panen melon manis berkualitas tinggi, bernilai jual tinggi, dan berstandar pasar modern dengan teknik budidaya presisi dari persiapan awal hingga purna jual.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#tahapan" class="w-full sm:w-auto text-center px-8 py-4 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-emerald-950 font-bold rounded-xl shadow-lg shadow-amber-500/20 transition transform hover:-translate-y-1">
+                            Mulai Belajar Budidaya <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="#kalkulator" class="w-full sm:w-auto text-center px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold rounded-xl backdrop-blur-md transition">
+                            Estimasi Laba Panen
+                        </a>
+                    </div>
+
+                    <!-- Key Stats Highlights -->
+                    <div class="grid grid-cols-3 gap-4 pt-8 border-t border-emerald-700/60 max-w-lg mx-auto lg:mx-0">
+                        <div>
+                            <span class="block text-2xl sm:text-3xl font-extrabold text-amber-300">65-75</span>
+                            <span class="text-xs sm:text-sm text-emerald-200">Hari Masa Panen (HST)</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl sm:text-3xl font-extrabold text-amber-300">12 - 15°</span>
+                            <span class="text-xs sm:text-sm text-emerald-200">Tingkat Manis (Brix)</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl sm:text-3xl font-extrabold text-amber-300">2-3 Kg</span>
+                            <span class="text-xs sm:text-sm text-emerald-200">Rata-rata Bobot/Buah</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Graphic Visual Card -->
+                <div class="lg:col-span-5">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-amber-400 to-emerald-400 rounded-3xl blur opacity-30"></div>
+                        <div class="relative bg-emerald-900/90 border border-emerald-700/60 rounded-3xl p-6 sm:p-8 backdrop-blur-xl shadow-2xl text-slate-100">
+                            <div class="flex items-center justify-between mb-6 border-b border-emerald-800 pb-4">
+                                <div class="flex items-center space-x-3">
+                                    <div class="p-3 bg-amber-500/20 text-amber-400 rounded-xl">
+                                        <i class="fa-solid fa-sun text-2xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-white">Syarat Tumbuh Optimal</h3>
+                                        <p class="text-xs text-emerald-300">Kunci Utama Kualitas Super</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <ul class="space-y-4 text-sm">
+                                <li class="flex items-start space-x-3 bg-emerald-800/40 p-3 rounded-xl border border-emerald-700/40">
+                                    <i class="fa-solid fa-temperature-three-quarters text-amber-400 mt-1"></i>
+                                    <div>
+                                        <strong class="text-emerald-200 block">Suhu & Cuaca:</strong>
+                                        <span class="text-emerald-100/80">25°C - 35°C dengan paparan sinar matahari penuh (8-10 jam/hari).</span>
+                                    </div>
+                                </li>
+                                <li class="flex items-start space-x-3 bg-emerald-800/40 p-3 rounded-xl border border-emerald-700/40">
+                                    <i class="fa-solid fa-mountain text-amber-400 mt-1"></i>
+                                    <div>
+                                        <strong class="text-emerald-200 block">Ketinggian Lahan:</strong>
+                                        <span class="text-emerald-100/80">Optimal di dataran rendah - menengah (250 - 700 mdpl).</span>
+                                    </div>
+                                </li>
+                                <li class="flex items-start space-x-3 bg-emerald-800/40 p-3 rounded-xl border border-emerald-700/40">
+                                    <i class="fa-solid fa-flask text-amber-400 mt-1"></i>
+                                    <div>
+                                        <strong class="text-emerald-200 block">Derajat Keasaman (pH Tanah):</strong>
+                                        <span class="text-emerald-100/80">Ideal pH 6.0 - 7.0 (Tanah gembur kaya bahan organik).</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TAHAPAN BUDIDAYA SECTION -->
+    <section id="tahapan" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-emerald-600 font-bold tracking-wider text-sm uppercase bg-emerald-100 px-3 py-1 rounded-full">Prosedur Standar</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 mb-4">5 Tahapan Kunci Budidaya Melon Sukses</h2>
+                <p class="text-slate-600">Setiap langkah menentukan produktivitas dan kualitas rasa manis buah melon yang dihasilkan.</p>
+            </div>
+
+            <!-- Steps Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Step 1 -->
+                <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all border border-slate-100 group relative flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-emerald-100 group-hover:bg-emerald-600 text-emerald-700 group-hover:text-white rounded-2xl flex items-center justify-center text-2xl font-bold transition-all mb-6">
+                            01
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">Persiapan Lahan & Media</h3>
+                        <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+                            Pengolahan tanah, pengukuran pH, pembuatan bedengan, serta pemberian pupuk dasar yang seimbang.
+                        </p>
+                        <ul class="text-xs text-slate-500 space-y-2 mb-6">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i>Bedengan lebar 100-120 cm & tinggi 30-40 cm</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i>Aplikasi Kapur Dolomit jika pH < 6.0</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i>Pemasangan Mulsa Plastik Hitam Perak (MPHP)</li>
+                        </ul>
+                    </div>
+                    <button onclick="openModal('modal-1')" class="w-full py-2.5 bg-slate-100 hover:bg-emerald-50 text-emerald-700 font-semibold rounded-xl text-sm transition">
+                        Detail Persiapan <i class="fa-solid fa-chevron-right text-xs ml-1"></i>
+                    </button>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all border border-slate-100 group relative flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-emerald-100 group-hover:bg-emerald-600 text-emerald-700 group-hover:text-white rounded-2xl flex items-center justify-center text-2xl font-bold transition-all mb-6">
+                            02
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">Penyemaian & Penanaman</h3>
+                        <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+                            Proses perendaman benih unggul, perlakuan fungisida, semai tray, hingga pindah tanam ke lahan.
+                        </p>
+                        <ul class="text-xs text-slate-500 space-y-2 mb-6">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i>Rendam benih air hangat (30-40°C) selama 3-4 jam</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i>Penyemaian tray semai 7-10 hari</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i>Transplanting saat muncul 2-3 helai daun sejati</li>
+                        </ul>
+                    </div>
+                    <button onclick="openModal('modal-2')" class="w-full py-2.5 bg-slate-100 hover:bg-emerald-50 text-emerald-700 font-semibold rounded-xl text-sm transition">
+                        Detail Penyemaian <i class="fa-solid fa-chevron-right text-xs ml-1"></i>
+                    </button>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all border border-slate-100 group relative flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-emerald-100 group-hover:bg-emerald-600 text-emerald-700 group-hover:text-white rounded-2xl flex items-center justify-center text-2xl font-bold transition-all mb-6">
+                            03
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">Perawatan & Pemeliharaan</h3>
+                        <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+                            Pemasangan lanjaran, pemangkasan (pruning), penyerbukan buatan, dan seleksi buah potensial.
+                        </p>
+                        <ul class="text-xs text-slate-500 space-y-2 mb-6">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i>Pemasangan ajir/lanjaran bambu setinggi 2 meter</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i>Penyerbukan buatan pada ruas cabang ke-9 hingga 13</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i>Seleksi 1-2 buah terbaik per tanaman</li>
+                        </ul>
+                    </div>
+                    <button onclick="openModal('modal-3')" class="w-full py-2.5 bg-slate-100 hover:bg-emerald-50 text-emerald-700 font-semibold rounded-xl text-sm transition">
+                        Detail Perawatan <i class="fa-solid fa-chevron-right text-xs ml-1"></i>
+                    </button>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all border border-slate-100 group relative flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-amber-100 group-hover:bg-amber-500 text-amber-700 group-hover:text-white rounded-2xl flex items-center justify-center text-2xl font-bold transition-all mb-6">
+                            04
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">Pengendalian HPT</h3>
+                        <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+                            Monitoring serta tindakan pencegahan penyakit utama seperti embun tepung, layu fusarium, dan thrips.
+                        </p>
+                        <ul class="text-xs text-slate-500 space-y-2 mb-6">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i>Sanitasi lahan berkala untuk menekan hama</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i>Penyemprotan fungisida & insektisida teratur</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i>Pemasangan kincir/perangkap kuning (Yellow Trap)</li>
+                        </ul>
+                    </div>
+                    <a href="#hama" class="w-full py-2.5 bg-slate-100 hover:bg-amber-50 text-amber-700 font-semibold rounded-xl text-sm transition text-center block">
+                        Pusat Penanganan Hama <i class="fa-solid fa-arrow-down text-xs ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all border border-slate-100 group relative flex flex-col justify-between md:col-span-2 lg:col-span-1">
+                    <div>
+                        <div class="w-14 h-14 bg-amber-100 group-hover:bg-amber-500 text-amber-700 group-hover:text-white rounded-2xl flex items-center justify-center text-2xl font-bold transition-all mb-6">
+                            05
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">Panen & Pascapanen</h3>
+                        <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+                            Identifikasi tingkat kematangan optimal, teknik pemotongan tangkai T, serta sortir & kemasan.
+                        </p>
+                        <ul class="text-xs text-slate-500 space-y-2 mb-6">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i>Retakan jaring (net) terbentuk sempurna</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i>Aroma harum khas melon mulai menguat</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i>Potong tangkai membentuk huruf 'T'</li>
+                        </ul>
+                    </div>
+                    <button onclick="openModal('modal-5')" class="w-full py-2.5 bg-slate-100 hover:bg-amber-50 text-amber-700 font-semibold rounded-xl text-sm transition">
+                        Detail Panen <i class="fa-solid fa-chevron-right text-xs ml-1"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- KALKULATOR / ESTIMASI PANEN SECTION -->
+    <section id="kalkulator" class="py-20 bg-emerald-900 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="bg-emerald-800 text-amber-300 font-bold text-xs uppercase px-4 py-1.5 rounded-full border border-emerald-700">Simulasi Finansial</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mt-3 text-white">Kalkulator Estimasi Hasil Panen & Laba</h2>
+                <p class="text-emerald-200 mt-2">Hitung potensi produksi tonase dan proyeksi pendapatan bersih usaha tani melon Anda.</p>
+            </div>
+
+            <div class="bg-white text-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl max-w-5xl mx-auto border border-emerald-100">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    
+                    <!-- Form Input Section -->
+                    <div class="lg:col-span-6 space-y-6">
+                        <h3 class="text-xl font-bold text-emerald-950 border-b pb-3 flex items-center">
+                            <i class="fa-solid fa-sliders text-emerald-600 mr-2"></i> Parameter Lahan & Buah
+                        </h3>
+
+                        <!-- Input Mode Switcher -->
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-500 mb-2">METODE PERHITUNGAN</label>
+                            <div class="grid grid-cols-2 gap-2 bg-slate-100 p-1 rounded-xl">
+                                <button type="button" id="btn-mode-luas" onclick="setCalcMode('luas')" class="py-2 text-xs sm:text-sm font-bold rounded-lg transition bg-white shadow-sm text-emerald-700">Luas Lahan (m²)</button>
+                                <button type="button" id="btn-mode-populasi" onclick="setCalcMode('populasi')" class="py-2 text-xs sm:text-sm font-bold rounded-lg transition text-slate-600 hover:text-slate-900">Jumlah Populasi</button>
+                            </div>
+                        </div>
+
+                        <!-- Luas / Populasi Dynamic Input -->
+                        <div id="input-container-luas">
+                            <label class="block text-sm font-medium text-slate-700 mb-1">Luas Lahan Tanam (m²)</label>
+                            <div class="relative">
+                                <input type="number" id="input-luas" value="1000" min="100" class="w-full pl-4 pr-12 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:outline-none font-semibold">
+                                <span class="absolute right-4 top-3.5 text-xs text-slate-400 font-bold">m²</span>
+                            </div>
+                            <p class="text-xs text-slate-400 mt-1">Estimasi kepadatan: ~2.2 tanaman per m² (termasuk parit/pematang)</p>
+                        </div>
+
+                        <div id="input-container-populasi" class="hidden">
+                            <label class="block text-sm font-medium text-slate-700 mb-1">Jumlah Populasi Tanaman</label>
+                            <div class="relative">
+                                <input type="number" id="input-populasi" value="2200" min="100" class="w-full pl-4 pr-12 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:outline-none font-semibold">
+                                <span class="absolute right-4 top-3.5 text-xs text-slate-400 font-bold">Pohon</span>
+                            </div>
+                        </div>
+
+                        <!-- Sliders for weight and price -->
+                        <div class="space-y-4 pt-2">
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="text-slate-600 font-medium">Target Bobot Rata-Rata Buah</span>
+                                    <span id="label-bobot" class="font-bold text-emerald-700">2.2 Kg</span>
+                                </div>
+                                <input type="range" id="range-bobot" min="1.2" max="3.5" step="0.1" value="2.2" class="w-full accent-emerald-600 cursor-pointer">
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="text-slate-600 font-medium">Buah Dipelihara Per Tanaman</span>
+                                    <span id="label-buah" class="font-bold text-emerald-700">1 Buah</span>
+                                </div>
+                                <input type="range" id="range-buah" min="1" max="2" step="1" value="1" class="w-full accent-emerald-600 cursor-pointer">
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="text-slate-600 font-medium">Harga Jual Pasar (Per Kg)</span>
+                                    <span id="label-harga" class="font-bold text-emerald-700">Rp 12.000</span>
+                                </div>
+                                <input type="range" id="range-harga" min="6000" max="25000" step="500" value="12000" class="w-full accent-emerald-600 cursor-pointer">
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="text-slate-600 font-medium">Estimasi Biaya Modal Per Pohon</span>
+                                    <span id="label-modal" class="font-bold text-emerald-700">Rp 8.000</span>
+                                </div>
+                                <input type="range" id="range-modal" min="4000" max="15000" step="500" value="8000" class="w-full accent-emerald-600 cursor-pointer">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Output Results Section -->
+                    <div class="lg:col-span-6 bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-200/80 space-y-6">
+                        <h3 class="text-xl font-bold text-slate-800 border-b border-slate-200 pb-3 flex items-center">
+                            <i class="fa-solid fa-chart-pie text-amber-500 mr-2"></i> Hasil Estimasi Proyeksi
+                        </h3>
+
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm">
+                                <span class="text-xs text-slate-500 uppercase font-bold">Populasi Tanaman</span>
+                                <span id="res-populasi" class="block text-2xl font-extrabold text-slate-800 mt-1">2.200</span>
+                                <span class="text-[10px] text-slate-400">Pohon terawat</span>
+                            </div>
+
+                            <div class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm">
+                                <span class="text-xs text-slate-500 uppercase font-bold">Total Hasil Panen</span>
+                                <span id="res-tonase" class="block text-2xl font-extrabold text-emerald-600 mt-1">4.84 Ton</span>
+                                <span class="text-[10px] text-slate-400">± 4.840 Kg</span>
+                            </div>
+                        </div>
+
+                        <div class="space-y-3 pt-2">
+                            <div class="flex justify-between items-center text-sm py-2 border-b border-slate-200">
+                                <span class="text-slate-600">Estimasi Total Biaya Modal</span>
+                                <span id="res-total-modal" class="font-semibold text-slate-800">Rp 17.600.000</span>
+                            </div>
+
+                            <div class="flex justify-between items-center text-sm py-2 border-b border-slate-200">
+                                <span class="text-slate-600">Estimasi Omset / Pendapatan Kotor</span>
+                                <span id="res-omset" class="font-semibold text-emerald-700">Rp 58.080.000</span>
+                            </div>
+
+                            <div class="bg-emerald-50 border border-emerald-200 p-4 rounded-xl mt-4">
+                                <span class="block text-xs font-bold text-emerald-800 uppercase">Potensi Keuntungan Bersih (Laba)</span>
+                                <span id="res-laba" class="block text-3xl font-black text-emerald-700 mt-1">Rp 40.480.000</span>
+                                <span class="text-xs text-emerald-600 mt-1 block">*Perhitungan berbasis asumsi tingkat keberhasilan panen 90%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TIMELINE CHECKLIST HST SECTION -->
+    <section id="jadwal" class="py-20 bg-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-emerald-600 font-bold tracking-wider text-sm uppercase bg-emerald-100 px-3 py-1 rounded-full">Interactive Timeline</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">Jadwal Perawatan Berkala (HST)</h2>
+                <p class="text-slate-600 mt-2">Panduan tindakan rutin berdasarkan Hari Setelah Tanam (HST). Gunakan checklist interaktif untuk memantau kebun Anda.</p>
+            </div>
+
+            <!-- Timeline Tabs Filter -->
+            <div class="flex justify-center space-x-2 mb-10 overflow-x-auto pb-2">
+                <button onclick="filterTimeline('all')" class="tl-btn active bg-emerald-600 text-white px-4 py-2 rounded-xl text-sm font-medium shadow-md transition">Semua Phase</button>
+                <button onclick="filterTimeline('awal')" class="tl-btn bg-white hover:bg-emerald-50 text-slate-700 px-4 py-2 rounded-xl text-sm font-medium border border-slate-200 transition">Fase Vegetatif (0-20 HST)</button>
+                <button onclick="filterTimeline('bunga')" class="tl-btn bg-white hover:bg-emerald-50 text-slate-700 px-4 py-2 rounded-xl text-sm font-medium border border-slate-200 transition">Generatif/Bunga (21-40 HST)</button>
+                <button onclick="filterTimeline('buah')" class="tl-btn bg-white hover:bg-emerald-50 text-slate-700 px-4 py-2 rounded-xl text-sm font-medium border border-slate-200 transition">Pembesaran Buah (41-60 HST)</button>
+                <button onclick="filterTimeline('panen')" class="tl-btn bg-white hover:bg-emerald-50 text-slate-700 px-4 py-2 rounded-xl text-sm font-medium border border-slate-200 transition">Pematangan (60+ HST)</button>
+            </div>
+
+            <!-- Timeline Card Container -->
+            <div class="space-y-6 max-w-4xl mx-auto">
+                
+                <!-- HST Item 1 -->
+                <div class="tl-item timeline-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 hover:border-emerald-300 transition" data-phase="awal">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-emerald-100 text-emerald-800 px-3 py-2 rounded-xl font-black text-center min-w-[70px]">
+                                <span class="block text-xs uppercase text-emerald-600">HST</span>
+                                <span class="text-lg">0 - 7</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-lg">Pindah Tanam & Adaptasi Akar</h4>
+                                <p class="text-slate-600 text-sm mt-1">Penyiraman pagi/sore hari. Pastikan benih tidak layu di bawah terik matahari langsung.</p>
+                                <div class="mt-3 flex flex-wrap gap-2">
+                                    <span class="bg-slate-100 text-slate-600 text-[11px] font-medium px-2.5 py-1 rounded-md"><i class="fa-solid fa-droplet text-blue-500 mr-1"></i>Penyiraman Halus</span>
+                                    <span class="bg-slate-100 text-slate-600 text-[11px] font-medium px-2.5 py-1 rounded-md"><i class="fa-solid fa-shield text-amber-500 mr-1"></i>Aplikasi Anti-Layu</span>
+                                </div>
+                            </div>
+                        </div>
+                        <label class="inline-flex items-center cursor-pointer self-start sm:self-center">
+                            <input type="checkbox" class="sr-only peer" onchange="toggleTask(this)">
+                            <div class="relative w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-emerald-600"></div>
+                            <span class="ml-2 text-xs font-semibold text-slate-500 peer-checked:text-emerald-700">Selesai</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- HST Item 2 -->
+                <div class="tl-item timeline-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 hover:border-emerald-300 transition" data-phase="awal">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-emerald-100 text-emerald-800 px-3 py-2 rounded-xl font-black text-center min-w-[70px]">
+                                <span class="block text-xs uppercase text-emerald-600">HST</span>
+                                <span class="text-lg">8 - 15</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-lg">Pemasangan Ajir & Pemupukan Susulan I</h4>
+                                <p class="text-slate-600 text-sm mt-1">Ikat batang utama secara longgar ke lanjaran bambu. Berikan kocor pupuk NPK tinggi Unsur N.</p>
+                                <div class="mt-3 flex flex-wrap gap-2">
+                                    <span class="bg-slate-100 text-slate-600 text-[11px] font-medium px-2.5 py-1 rounded-md"><i class="fa-solid fa-vial text-emerald-500 mr-1"></i>NPK 25-7-7 (5g/tanaman)</span>
+                                    <span class="bg-slate-100 text-slate-600 text-[11px] font-medium px-2.5 py-1 rounded-md"><i class="fa-solid fa-scissors text-amber-500 mr-1"></i>Pruning Tunas Bawah (Ruas 1-8)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <label class="inline-flex items-center cursor-pointer self-start sm:self-center">
+                            <input type="checkbox" class="sr-only peer" onchange="toggleTask(this)">
+                            <div class="relative w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-emerald-600"></div>
+                            <span class="ml-2 text-xs font-semibold text-slate-500 peer-checked:text-emerald-700">Selesai</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- HST Item 3 -->
+                <div class="tl-item timeline-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 hover:border-emerald-300 transition" data-phase="bunga">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-amber-100 text-amber-800 px-3 py-2 rounded-xl font-black text-center min-w-[70px]">
+                                <span class="block text-xs uppercase text-amber-600">HST</span>
+                                <span class="text-lg">21 - 35</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-lg">Fase Penyerbukan Buatan (Polinasi)</h4>
+                                <p class="text-slate-600 text-sm mt-1">Lakukan penyerbukan serbuk sari bunga jantan ke kepala putik bunga betina pada pagi hari (06.00 - 09.00 WIB) di ruas cabang ke-9 s/d 12.</p>
+                                <div class="mt-3 flex flex-wrap gap-2">
+                                    <span class="bg-slate-100 text-slate-600 text-[11px] font-medium px-2.5 py-1 rounded-md"><i class="fa-solid fa-hands text-amber-500 mr-1"></i>Polinasi Manual</span>
+                                    <span class="bg-slate-100 text-slate-600 text-[11px] font-medium px-2.5 py-1 rounded-md"><i class="fa-solid fa-ban text-red-500 mr-1"></i>Stop Pestisida Selama Polinasi</span>
+                                </div>
+                            </div>
+                        </div>
+                        <label class="inline-flex items-center cursor-pointer self-start sm:self-center">
+                            <input type="checkbox" class="sr-only peer" onchange="toggleTask(this)">
+                            <div class="relative w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-emerald-600"></div>
+                            <span class="ml-2 text-xs font-semibold text-slate-500 peer-checked:text-emerald-700">Selesai</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- HST Item 4 -->
+                <div class="tl-item timeline-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 hover:border-emerald-300 transition" data-phase="buah">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-amber-100 text-amber-800 px-3 py-2 rounded-xl font-black text-center min-w-[70px]">
+                                <span class="block text-xs uppercase text-amber-600">HST</span>
+                                <span class="text-lg">36 - 55</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-lg">Seleksi Buah & Pembentukan Netting</h4>
+                                <p class="text-slate-600 text-sm mt-1">Pilih 1 buah berbentuk simetris dan paling sehat, pangkas buah lainnya. Gantung calon buah dengan tali rafia ke lanjaran utama.</p>
+                                <div class="mt-3 flex flex-wrap gap-2">
+                                    <span class="bg-slate-100 text-slate-600 text-[11px] font-medium px-2.5 py-1 rounded-md"><i class="fa-solid fa-weight-scale text-emerald-500 mr-1"></i>Tingkatkan Kalium (K) & Kalsium</span>
+                                    <span class="bg-slate-100 text-slate-600 text-[11px] font-medium px-2.5 py-1 rounded-md"><i class="fa-solid fa-ribbon text-amber-500 mr-1"></i>Pengikatan Tangkai Buah</span>
+                                </div>
+                            </div>
+                        </div>
+                        <label class="inline-flex items-center cursor-pointer self-start sm:self-center">
+                            <input type="checkbox" class="sr-only peer" onchange="toggleTask(this)">
+                            <div class="relative w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-emerald-600"></div>
+                            <span class="ml-2 text-xs font-semibold text-slate-500 peer-checked:text-emerald-700">Selesai</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- HST Item 5 -->
+                <div class="tl-item timeline-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 hover:border-emerald-300 transition" data-phase="panen">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-orange-100 text-orange-800 px-3 py-2 rounded-xl font-black text-center min-w-[70px]">
+                                <span class="block text-xs uppercase text-orange-600">HST</span>
+                                <span class="text-lg">60 - 75+</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-lg">Pematangan, Peningkatan Brix & Panen</h4>
+                                <p class="text-slate-600 text-sm mt-1">Kurangi debit penyiraman 7 hari sebelum panen untuk memicu akumulasi kadar gula (Brix). Panen pada pagi hari.</p>
+                                <div class="mt-3 flex flex-wrap gap-2">
+                                    <span class="bg-slate-100 text-slate-600 text-[11px] font-medium px-2.5 py-1 rounded-md"><i class="fa-solid fa-fire text-amber-500 mr-1"></i>Pengurangan Air (Meningkatkanbrix)</span>
+                                    <span class="bg-slate-100 text-slate-600 text-[11px] font-medium px-2.5 py-1 rounded-md"><i class="fa-solid fa-basket-shopping text-emerald-500 mr-1"></i>Panen Potong Tangkai T</span>
+                                </div>
+                            </div>
+                        </div>
+                        <label class="inline-flex items-center cursor-pointer self-start sm:self-center">
+                            <input type="checkbox" class="sr-only peer" onchange="toggleTask(this)">
+                            <div class="relative w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-emerald-600"></div>
+                            <span class="ml-2 text-xs font-semibold text-slate-500 peer-checked:text-emerald-700">Selesai</span>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- HAMA & PENYAKIT SECTION -->
+    <section id="hama" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-red-600 font-bold tracking-wider text-sm uppercase bg-red-100 px-3 py-1 rounded-full">Proteksi Tanaman</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">Pengendalian Hama & Penyakit Utama</h2>
+                <p class="text-slate-600">Solusi terpadu pencegahan dan penanganan masalah serangan organisme pengganggu tanaman (OPT).</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Hama 1 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/80 hover:shadow-lg transition">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-bold bg-red-100 text-red-700 px-2.5 py-1 rounded-md">HAMA SERANGGA</span>
+                        <i class="fa-solid fa-bug text-red-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-800">Kutu Daun (Aphis gossypii) & Thrips</h3>
+                    <p class="text-xs text-slate-500 mt-1 mb-4">Menghisap cairan daun muda, menyebabkan daun menggulung, keriting, serta menjadi vektor virus keriting kuning.</p>
+                    
+                    <div class="space-y-3 text-xs border-t border-slate-200 pt-3">
+                        <div>
+                            <strong class="text-slate-700 block">Gejala Serangan:</strong>
+                            <p class="text-slate-600">Daun melengkung ke atas, pertumbuhan kerdil, terdapat jelaga hitam.</p>
+                        </div>
+                        <div>
+                            <strong class="text-emerald-700 block">Solusi Organic / Organik:</strong>
+                            <p class="text-slate-600">Semprotkan ekstrak daun mimba atau minyak neem oil + sabun cair.</p>
+                        </div>
+                        <div>
+                            <strong class="text-blue-700 block">Solusi Kimia / Tepat Guna:</strong>
+                            <p class="text-slate-600">Bahan aktif Imidakloprid, Abamektin, atau Thiamethoxam secara bergantian.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Penyakit 2 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/80 hover:shadow-lg transition">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-bold bg-amber-100 text-amber-700 px-2.5 py-1 rounded-md">PENYAKIT JAMUR</span>
+                        <i class="fa-solid fa-virus text-amber-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-800">Embun Tepung (Powdery Mildew)</h3>
+                    <p class="text-xs text-slate-500 mt-1 mb-4">Infeksi jamur *Erysiphe cichoracearum* yang menyerang permukaan daun tua maupun muda di kelembapan tinggi.</p>
+                    
+                    <div class="space-y-3 text-xs border-t border-slate-200 pt-3">
+                        <div>
+                            <strong class="text-slate-700 block">Gejala Serangan:</strong>
+                            <p class="text-slate-600">Bercak putih menyerupai bedak pada permukaan atas dan bawah daun.</p>
+                        </div>
+                        <div>
+                            <strong class="text-emerald-700 block">Solusi Organic / Pencegahan:</strong>
+                            <p class="text-slate-600">Pangkas daun tua di bagian bawah untuk memperbaiki sirkulasi udara.</p>
+                        </div>
+                        <div>
+                            <strong class="text-blue-700 block">Solusi Kimia / Tepat Guna:</strong>
+                            <p class="text-slate-600">Fungisida sistemik berbahan aktif Azoksistrobin, Difenokonazol, atau Heksakonazol.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Penyakit 3 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/80 hover:shadow-lg transition">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-bold bg-amber-100 text-amber-700 px-2.5 py-1 rounded-md">PENYAKIT BAKTERI / JAMUR</span>
+                        <i class="fa-solid fa-skull-crossbones text-amber-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-800">Layu Fusarium & Layu Bakteri</h3>
+                    <p class="text-xs text-slate-500 mt-1 mb-4">Penyumbatan pembuluh vaskular tanaman yang menyebabkan tanaman layu mendadak dan mati.</p>
+                    
+                    <div class="space-y-3 text-xs border-t border-slate-200 pt-3">
+                        <div>
+                            <strong class="text-slate-700 block">Gejala Serangan:</strong>
+                            <p class="text-slate-600">Tanaman layu siang hari dan segar kembali malam hari, hingga akhirnya layu permanen.</p>
+                        </div>
+                        <div>
+                            <strong class="text-emerald-700 block">Solusi Organic / Preventif:</strong>
+                            <p class="text-slate-600">Aplikasi agens hayati *Trichoderma spp.* dan agen hayati *Pseudomonas fluorescens* sejak olah tanah.</p>
+                        </div>
+                        <div>
+                            <strong class="text-blue-700 block">Solusi Kimia / Tepat Guna:</strong>
+                            <p class="text-slate-600">Kocor fungisida berbahan aktif Mankozeb atau Tembaga Hidroksida pada pangkal batang.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ ACCORDION SECTION -->
+    <section id="faq" class="py-20 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <span class="text-emerald-600 font-bold tracking-wider text-sm uppercase bg-emerald-100 px-3 py-1 rounded-full">Tanya Jawab</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">Pertanyaan Sering Diajukan (FAQ)</h2>
+                <p class="text-slate-600 mt-2">Jawaban ringkas dari pakar seputar kendala praktis di lapangan.</p>
+            </div>
+
+            <div class="space-y-4">
+                
+                <!-- FAQ 1 -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq('faq-1')" class="w-full text-left px-6 py-5 font-bold text-slate-800 flex justify-between items-center hover:bg-slate-50 transition">
+                        <span>Bagaimana cara meningkatkan tingkat manis (Brix) buah melon agar maksimal?</span>
+                        <i id="faq-icon-faq-1" class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div id="faq-1" class="hidden px-6 pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+                        Untuk mendongkrak rasa manis (Brix 12-15°):
+                        <ol class="list-decimal pl-5 space-y-1.5 mt-2">
+                            <li>Kurangi intensitas penyiraman sekitar 7-10 hari sebelum panen (kondisi agak stres air memicu penumpukan gula).</li>
+                            <li>Berikan asupan pupuk unsur Kalium (K) tinggi seperti MKP atau Kalium Nitrat (KNO3) pada fase pembesaran buah (HST 40-60).</li>
+                            <li>Pastikan tanaman mendapatkan pencahayaan sinar matahari penuh tanpa terhalang naungan.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq('faq-2')" class="w-full text-left px-6 py-5 font-bold text-slate-800 flex justify-between items-center hover:bg-slate-50 transition">
+                        <span>Mengapa buah melon yang dipelihara disarankan 1 atau maksimal 2 buah per pohon?</span>
+                        <i id="faq-icon-faq-2" class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div id="faq-2" class="hidden px-6 pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+                        Memelihara 1-2 buah bertujuan agar alokasi nutrisi dari fotosintesis fokus sepenuhnya pada pembentukan bobot ideal (2.0 - 2.8 Kg/buah) serta rasa manis yang konsisten. Jika dipelihara terlalu banyak tanpa penambahan dosis nutrisi ekstra, buah akan berukuran kerdil dan kadar manisnya hambar.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq('faq-3')" class="w-full text-left px-6 py-5 font-bold text-slate-800 flex justify-between items-center hover:bg-slate-50 transition">
+                        <span>Kapan waktu terbaik melakukan penyerbukan buatan (polinasi manual)?</span>
+                        <i id="faq-icon-faq-3" class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div id="faq-3" class="hidden px-6 pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+                        Waktu optimal polinasi buatan adalah pagi hari antara pukul 06.00 hingga 09.00 WIB. Pada jam ini, serbuk sari (pollen) dalam kondisi fertil/subur dan kepala putik dalam keadaan sangat reseptif (terbuka & basah).
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq('faq-4')" class="w-full text-left px-6 py-5 font-bold text-slate-800 flex justify-between items-center hover:bg-slate-50 transition">
+                        <span>Apa keunggulan menanam melon dengan mulsa MPHP dibanding tanpa mulsa?</span>
+                        <i id="faq-icon-faq-4" class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div id="faq-4" class="hidden px-6 pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+                        Mulsa Plastik Hitam Perak (MPHP) bermanfaat untuk:
+                        <ul class="list-disc pl-5 space-y-1 mt-1">
+                            <li>Menjaga kelembapan dan kehangatan suhu tanah.</li>
+                            <li>Menekan pertumbuhan gulma/rumput liar secara signifikan.</li>
+                            <li>Memantulkan cahaya matahari sisi perak ke bagian bawah daun untuk mengusir hama serangga seperti Thrips dan Kutu Daun.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-600 flex items-center justify-center text-white">
+                        <i class="fa-solid fa-seedling text-lg"></i>
+                    </div>
+                    <span class="text-xl font-bold text-white tracking-wide">AgriMelon</span>
+                </div>
+                <p class="text-xs text-center md:text-right">
+                    © 2026 AgriMelon Education Platform. Didedikasikan untuk kemajuan petani melon Indonesia.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODALS FOR DETAILED GUIDES -->
+    
+    <!-- Modal 1: Persiapan Lahan -->
+    <div id="modal-1" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 max-h-[90vh] overflow-y-auto shadow-2xl relative">
+            <button onclick="closeModal('modal-1')" class="absolute top-6 right-6 text-slate-400 hover:text-slate-600 text-xl font-bold">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="flex items-center space-x-3 mb-4">
+                <span class="bg-emerald-100 text-emerald-800 font-bold px-3 py-1 rounded-lg text-sm">Tahap 1</span>
+                <h3 class="text-2xl font-bold text-slate-800">Panduan Detil Persiapan Lahan</h3>
+            </div>
+            <div class="space-y-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+                <p><strong>1. Pengolahan Tanah:</strong> Cangkul atau bajak tanah seminggu sebelum tanam setebal 30-40 cm untuk menggemburkan struktur perakaran.</p>
+                <p><strong>2. Pengukuran & Pengondisian pH:</strong> Melon menyukai pH 6.0 - 7.0. Jika pH < 5.5, taburkan kapur Dolomit 1.5 - 2 ton/hektar dan biarkan tersiram hujan selama 7-10 hari.</p>
+                <p><strong>3. Pembuatan Bedengan:</strong> Buat bedengan selebar 100-120 cm, tinggi 30-40 cm (saat musim hujan buat 50 cm), dan jarak antar bedengan (parit) 50-60 cm.</p>
+                <p><strong>4. Pemupukan Dasar:</strong> Taburkan Pupuk Kandang matang/kompos (10-15 ton/ha) + SP-36 (150 kg/ha) + NPK (100 kg/ha). Aduk rata dengan tanah bedengan lalu tutup mulsa MPHP.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Penyemaian -->
+    <div id="modal-2" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 max-h-[90vh] overflow-y-auto shadow-2xl relative">
+            <button onclick="closeModal('modal-2')" class="absolute top-6 right-6 text-slate-400 hover:text-slate-600 text-xl font-bold">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="flex items-center space-x-3 mb-4">
+                <span class="bg-emerald-100 text-emerald-800 font-bold px-3 py-1 rounded-lg text-sm">Tahap 2</span>
+                <h3 class="text-2xl font-bold text-slate-800">Panduan Detil Penyemaian & Penanaman</h3>
+            </div>
+            <div class="space-y-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+                <p><strong>1. Perlakuan Benih:</strong> Rendam benih unggul dalam air hangat suam kuku (35-40°C) yang dicampur sedikit fungisida sistemik selama 3-4 jam.</p>
+                <p><strong>2. Pemeraman (Germinasi):</strong> Tiriskan benih dan bungkus dengan kain basah/handuk lembap selama 24-36 jam sampai calon akar putih (radikula) muncul 1-2 mm.</p>
+                <p><strong>3. Media Semai:</strong> Tanam calon benih ke dalam tray semai berisikan campuran tanah halus dan kasgot/kompos (1:1). Letakkan di rumah semai terhindar hujan langsung.</p>
+                <p><strong>4. Transplanting (Pindah Tanam):</strong> Bibit siap dipindah ke bedengan utama pada umur 7-10 HSS (Hari Setelah Semai) saat daun sejati ke-2 atau ke-3 sudah mekar sempurna. Lakukan sore hari.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: Perawatan -->
+    <div id="modal-3" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 max-h-[90vh] overflow-y-auto shadow-2xl relative">
+            <button onclick="closeModal('modal-3')" class="absolute top-6 right-6 text-slate-400 hover:text-slate-600 text-xl font-bold">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="flex items-center space-x-3 mb-4">
+                <span class="bg-emerald-100 text-emerald-800 font-bold px-3 py-1 rounded-lg text-sm">Tahap 3</span>
+                <h3 class="text-2xl font-bold text-slate-800">Panduan Teknik Pemeliharaan & Pruning</h3>
+            </div>
+            <div class="space-y-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+                <p><strong>1. Pemasangan Ajir/Lanjaran:</strong> Tancapkan bambu setinggi 2 meter di samping lubang tanam sejak HST 5 agar tidak merusak akar muda.</p>
+                <p><strong>2. Pruning / Pemangkasan Tunas:</strong> Buang semua tunas samping yang muncul pada ruas ke-1 hingga ruas ke-8. Biarkan tunas pada ruas ke-9 hingga ke-13 tumbuh untuk pembuahan.</p>
+                <p><strong>3. Penyerbukan Buatan:</strong> Petik bunga jantan yang mekar, buang mahkota bunganya, usapkan benang sari ke kepala putik bunga betina pada ruas 9-12 di pagi hari.</p>
+                <p><strong>4. Seleksi & Pengikatan Buah:</strong> Setelah buah berukuran sebesar telur bebek, pilih 1 buah paling mulus dan simetris. Ikat tangkai buah menggunakan tali rafia ke tiang ajir agar tidak roboh.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 5: Panen -->
+    <div id="modal-5" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 max-h-[90vh] overflow-y-auto shadow-2xl relative">
+            <button onclick="closeModal('modal-5')" class="absolute top-6 right-6 text-slate-400 hover:text-slate-600 text-xl font-bold">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="flex items-center space-x-3 mb-4">
+                <span class="bg-amber-100 text-amber-800 font-bold px-3 py-1 rounded-lg text-sm">Tahap 5</span>
+                <h3 class="text-2xl font-bold text-slate-800">Panduan Panen & Ciri Kematangan Optimal</h3>
+            </div>
+            <div class="space-y-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+                <p><strong>1. Ciri Fisik Siap Panen:</strong> 
+                    <br>- Serat jaring (net) pada kulit buah terbentuk tebal, padat, dan merata.
+                    <br>- Warna kulit dasar berubah dari hijau menjadi kekuningan (sesuai varietas).
+                    <br>- Tangkai buah mulai retak-retak halus atau membentuk cincin pemisah (abscission zone).
+                </p>
+                <p><strong>2. Teknik Pemotongan:</strong> Gunakan gunting pangkas tajam. Potong tangkai buah membentuk huruf "T" (menyisakan cabang utama 2-3 cm di kiri & kanan tangkai) untuk memperpanjang daya simpan.</p>
+                <p><strong>3. Penanganan Pasca Panen:</strong> Alasi tempat penampungan buah dengan jerami/karton tebal. Bersihkan kulit buah dari tanah, sortir berdasarkan kelas kualitas (Grade A, B, C), dan hindari tumpukan buah lebih dari 3 lapis.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT INTERACTIVE ENGINE -->
+    <script>
+        // --- Mobile Menu Toggle ---
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on click link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // --- Modals Management ---
+        function openModal(id) {
+            document.getElementById(id).classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal on outside click
+        window.addEventListener('click', (e) => {
+            ['modal-1', 'modal-2', 'modal-3', 'modal-5'].forEach(id => {
+                const modal = document.getElementById(id);
+                if (e.target === modal) {
+                    closeModal(id);
+                }
+            });
+        });
+
+        // --- Calculator Engine ---
+        let calcMode = 'luas'; // 'luas' or 'populasi'
+
+        const inputLuas = document.getElementById('input-luas');
+        const inputPopulasi = document.getElementById('input-populasi');
+        const rangeBobot = document.getElementById('range-bobot');
+        const rangeBuah = document.getElementById('range-buah');
+        const rangeHarga = document.getElementById('range-harga');
+        const rangeModal = document.getElementById('range-modal');
+
+        const labelBobot = document.getElementById('label-bobot');
+        const labelBuah = document.getElementById('label-buah');
+        const labelHarga = document.getElementById('label-harga');
+        const labelModal = document.getElementById('label-modal');
+
+        const resPopulasi = document.getElementById('res-populasi');
+        const resTonase = document.getElementById('res-tonase');
+        const resTotalModal = document.getElementById('res-total-modal');
+        const resOmset = document.getElementById('res-omset');
+        const resLaba = document.getElementById('res-laba');
+
+        function setCalcMode(mode) {
+            calcMode = mode;
+            const btnLuas = document.getElementById('btn-mode-luas');
+            const btnPop = document.getElementById('btn-mode-populasi');
+            const containerLuas = document.getElementById('input-container-luas');
+            const containerPop = document.getElementById('input-container-populasi');
+
+            if (mode === 'luas') {
+                btnLuas.className = "py-2 text-xs sm:text-sm font-bold rounded-lg transition bg-white shadow-sm text-emerald-700";
+                btnPop.className = "py-2 text-xs sm:text-sm font-bold rounded-lg transition text-slate-600 hover:text-slate-900";
+                containerLuas.classList.remove('hidden');
+                containerPop.classList.add('hidden');
+            } else {
+                btnPop.className = "py-2 text-xs sm:text-sm font-bold rounded-lg transition bg-white shadow-sm text-emerald-700";
+                btnLuas.className = "py-2 text-xs sm:text-sm font-bold rounded-lg transition text-slate-600 hover:text-slate-900";
+                containerPop.classList.remove('hidden');
+                containerLuas.classList.add('hidden');
+            }
+            calculateYield();
+        }
+
+        function formatRupiah(number) {
+            return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(number);
+        }
+
+        function formatNumber(number) {
+            return new Intl.NumberFormat('id-ID').format(number);
+        }
+
+        function calculateYield() {
+            let populasi = 0;
+
+            if (calcMode === 'luas') {
+                const luas = parseFloat(inputLuas.value) || 0;
+                populasi = Math.round(luas * 2.2); // ~2.2 tanaman per m2
+            } else {
+                populasi = parseInt(inputPopulasi.value) || 0;
+            }
+
+            const bobot = parseFloat(rangeBobot.value);
+            const buahPerPohon = parseInt(rangeBuah.value);
+            const harga = parseInt(rangeHarga.value);
+            const modalPerPohon = parseInt(rangeModal.value);
+
+            // Update Labels
+            labelBobot.innerText = `${bobot.toFixed(1)} Kg`;
+            labelBuah.innerText = `${buahPerPohon} Buah`;
+            labelHarga.innerText = formatRupiah(harga);
+            labelModal.innerText = formatRupiah(modalPerPohon);
+
+            // Calculations (assuming 90% harvest success rate)
+            const successRate = 0.90;
+            const populasiPanen = populasi * successRate;
+            const totalKg = populasiPanen * buahPerPohon * bobot;
+            const totalTon = totalKg / 1000;
+
+            const totalModal = populasi * modalPerPohon;
+            const totalOmset = totalKg * harga;
+            const totalLaba = totalOmset - totalModal;
+
+            // Render Output
+            resPopulasi.innerText = `${formatNumber(populasi)} Pohon`;
+            resTonase.innerText = `${totalTon.toFixed(2)} Ton`;
+            resTotalModal.innerText = formatRupiah(totalModal);
+            resOmset.innerText = formatRupiah(totalOmset);
+            resLaba.innerText = formatRupiah(totalLaba);
+
+            if (totalLaba < 0) {
+                resLaba.className = "block text-3xl font-black text-red-600 mt-1";
+            } else {
+                resLaba.className = "block text-3xl font-black text-emerald-700 mt-1";
+            }
+        }
+
+        // Add Listeners to inputs
+        [inputLuas, inputPopulasi, rangeBobot, rangeBuah, rangeHarga, rangeModal].forEach(elem => {
+            elem.addEventListener('input', calculateYield);
+        });
+
+        // Initialize Calculator
+        calculateYield();
+
+        // --- Timeline HST Filter ---
+        function filterTimeline(phase) {
+            const items = document.querySelectorAll('.tl-item');
+            const buttons = document.querySelectorAll('.tl-btn');
+
+            buttons.forEach(btn => {
+                btn.className = "tl-btn bg-white hover:bg-emerald-50 text-slate-700 px-4 py-2 rounded-xl text-sm font-medium border border-slate-200 transition";
+            });
+
+            event.target.className = "tl-btn active bg-emerald-600 text-white px-4 py-2 rounded-xl text-sm font-medium shadow-md transition";
+
+            items.forEach(item => {
+                if (phase === 'all' || item.dataset.phase === phase) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+        }
+
+        function toggleTask(checkbox) {
+            const card = checkbox.closest('.timeline-card');
+            if (checkbox.checked) {
+                card.classList.add('bg-emerald-50/60', 'border-emerald-300');
+            } else {
+                card.classList.remove('bg-emerald-50/60', 'border-emerald-300');
+            }
+        }
+
+        // --- FAQ Accordion ---
+        function toggleFaq(id) {
+            const faqContent = document.getElementById(id);
+            const faqIcon = document.getElementById(`faq-icon-${id}`);
+
+            if (faqContent.classList.contains('hidden')) {
+                faqContent.classList.remove('hidden');
+                faqIcon.classList.add('rotate-180');
+            } else {
+                faqContent.classList.add('hidden');
+                faqIcon.classList.remove('rotate-180');
+            }
+        }
+    </script>
+</body>
+</html>
